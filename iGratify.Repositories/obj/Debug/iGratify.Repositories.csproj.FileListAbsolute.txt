@@ -1,0 +1,12 @@
+D:\IGraify\iGratify\iGratify.Repositories\bin\Debug\iGratify.Repositories.dll.config
+D:\IGraify\iGratify\iGratify.Repositories\bin\Debug\iGratify.Repositories.pdb
+D:\IGraify\iGratify\iGratify.Repositories\bin\Debug\EntityFramework.dll
+D:\IGraify\iGratify\iGratify.Repositories\bin\Debug\EntityFramework.SqlServer.dll
+D:\IGraify\iGratify\iGratify.Repositories\bin\Debug\iGratify.Modals.dll
+D:\IGraify\iGratify\iGratify.Repositories\bin\Debug\EntityFramework.xml
+D:\IGraify\iGratify\iGratify.Repositories\bin\Debug\EntityFramework.SqlServer.xml
+D:\IGraify\iGratify\iGratify.Repositories\bin\Debug\iGratify.Modals.pdb
+D:\IGraify\iGratify\iGratify.Repositories\obj\Debug\iGratify.Repositories.dll
+D:\IGraify\iGratify\iGratify.Repositories\obj\Debug\iGratify.Repositories.pdb
+D:\IGraify\iGratify\iGratify.Repositories\bin\Debug\iGratify.Repositories.dll
+D:\IGraify\iGratify\iGratify.Repositories\obj\Debug\iGratify.Repositories.csprojResolveAssemblyReference.cache

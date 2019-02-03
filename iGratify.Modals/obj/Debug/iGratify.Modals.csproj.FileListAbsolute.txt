@@ -1,0 +1,4 @@
+D:\IGraify\iGratify\iGratify.Modals\bin\Debug\iGratify.Modals.dll
+D:\IGraify\iGratify\iGratify.Modals\bin\Debug\iGratify.Modals.pdb
+D:\IGraify\iGratify\iGratify.Modals\obj\Debug\iGratify.Modals.dll
+D:\IGraify\iGratify\iGratify.Modals\obj\Debug\iGratify.Modals.pdb

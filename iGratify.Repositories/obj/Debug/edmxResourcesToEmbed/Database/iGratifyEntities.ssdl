@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="iGratifyEntities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'iGratify.dbo.MasterData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MasterData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Type" Type="nvarchar" MaxLength="32" />
+    <Property Name="Code" Type="nvarchar" MaxLength="32" />
+    <Property Name="Description" Type="nvarchar" MaxLength="128" />
+    <Property Name="ParentType" Type="nvarchar" MaxLength="32" />
+    <Property Name="RowStatus" Type="char" MaxLength="1" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'iGratify.dbo.UserDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UserDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="binary" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="char" MaxLength="1" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="int" />
+  </EntityType>
+  <EntityContainer Name="iGratifyEntitiesStoreContainer">
+    <EntitySet Name="MasterData" EntityType="Self.MasterData" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MasterData].[Id] AS [Id], 
+    [MasterData].[Id_Type] AS [Id_Type], 
+    [MasterData].[Code] AS [Code], 
+    [MasterData].[Description] AS [Description], 
+    [MasterData].[ParentType] AS [ParentType], 
+    [MasterData].[RowStatus] AS [RowStatus], 
+    [MasterData].[CreatedBy] AS [CreatedBy], 
+    [MasterData].[CreatedOn] AS [CreatedOn], 
+    [MasterData].[UpdatedBy] AS [UpdatedBy], 
+    [MasterData].[UpdatedOn] AS [UpdatedOn]
+    FROM [dbo].[MasterData] AS [MasterData]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UserDetails" EntityType="Self.UserDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UserDetails].[Id] AS [Id], 
+    [UserDetails].[UserId] AS [UserId], 
+    [UserDetails].[Password] AS [Password], 
+    [UserDetails].[FirstName] AS [FirstName], 
+    [UserDetails].[MiddleName] AS [MiddleName], 
+    [UserDetails].[LastName] AS [LastName], 
+    [UserDetails].[Gender] AS [Gender], 
+    [UserDetails].[Email] AS [Email], 
+    [UserDetails].[MobileNo] AS [MobileNo]
+    FROM [dbo].[UserDetails] AS [UserDetails]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

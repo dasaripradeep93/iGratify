@@ -1,0 +1,6 @@
+D:\IGraify\iGratify\iGratify.Contracts\bin\Debug\iGratify.Contracts.dll
+D:\IGraify\iGratify\iGratify.Contracts\bin\Debug\iGratify.Contracts.pdb
+D:\IGraify\iGratify\iGratify.Contracts\obj\Debug\iGratify.Contracts.dll
+D:\IGraify\iGratify\iGratify.Contracts\obj\Debug\iGratify.Contracts.pdb
+D:\IGraify\iGratify\iGratify.Contracts\bin\Debug\Newtonsoft.Json.dll
+D:\IGraify\iGratify\iGratify.Contracts\bin\Debug\Newtonsoft.Json.xml

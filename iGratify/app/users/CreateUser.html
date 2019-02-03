@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <!-- Font Icon -->
+    <link href="../../colorlib/fonts/material-icon/css/material-design-iconic-font.css" rel="stylesheet" />
+    <!-- Main css -->
+    <link href="../../colorlib/css/style.css" rel="stylesheet" />
+    <script src="../../scripts/angular.min.js"></script>
+    <script src="CreateUserController.js"></script>
+    <script src="CreateUserService.js"></script>
+    <script src="../../colorlib/vendor/jquery/jquery.min.js"></script>
+    <script src="../../colorlib/js/main.js"></script>
+   
+</head>
+<body  ng-app="CreateUserModule">
+    <div class="main"  data-ng-controller="CreateUserCtrl as vm">
+        <div class="container">
+            <form method="POST" class="appointment-form" id="appointment-form">
+                <h2>igratify registration form</h2>
+                <div class="form-group-1">
+                    <input type="text" name="userid" id="userid" ng-model="vm.userid" placeholder="User Id" required />
+                    <input type="password" name="password" id="password" ng-model="vm.password" placeholder="Password" required />
+                    <input type="text" name="fullname" id="fullname" ng-model="vm.fullname" placeholder="Full Name" required />
+                    <input type="email" name="email" id="email" ng-model="vm.email" placeholder="Email" required />
+                    <input type="text" name="phone_number" id="phone_number" ng-model="vm.phonenumber" placeholder="Phone number" required />
+                    <div class="select-list" style="margin-bottom:unset">
+                        <select name="course_type" id="course_type" ng-model="vm.selectedGender">
+                            <option seleected value="">Gender</option>
+                            <option ng-repeat="item in vm.GenderList" value="{{item.code}}">{{item.description}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group-2">
+                    <h3>Profesional Details</h3>
+
+                    <div class="select-list" style="margin-bottom:unset">
+                        <select name="profession" id="profession" ng-model="vm.selectedProfession">
+                            <option seleected value="">Profession</option>
+                            <option ng-repeat="item in vm.ProfessionList" value="{{item.code}}">{{item.description}}</option>
+                        </select>
+                    </div>
+                    <div class="select-list" style="margin-bottom:unset">
+                        <select name="domain" id="domain" ng-model="vm.selectedDomain">
+                            <option seleected value="">Domain</option>
+                            <option ng-repeat="item in vm.DomainList" value="{{item.code}}">{{item.description}}</option>
+                        </select>
+                    </div>
+                    <div class="select-list" style="margin-bottom:unset">
+                        <select name="education" id="education" ng-model="vm.selectedIndustry">
+                            <option seleected value="">Industry</option>
+                            <option ng-repeat="item in vm.IndustryList" value="{{item.code}}">{{item.description}}</option>
+                        </select>
+                    </div>
+                    <input type="text" name="otp" id="otp" ng-model="vm.otp" placeholder="Enter OTP" required ng-change="vm.validateOTP()" />
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to the  <a href="#" class="term-service">Terms and Conditions</a></label>
+                </div>
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submitgenOTP" class="submit" style="float:left" value="Generate OTP" ng-click="vm.generateotp()" />
+                    <input type="submit" name="submit" id="submit" class="submit" style="float:right" value="Create User" ng-click="vm.createuser()" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+  
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="iGratifyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'iGratify.dbo.MasterData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MasterData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Type" Type="nvarchar" MaxLength="32" />
+    <Property Name="Code" Type="nvarchar" MaxLength="32" />
+    <Property Name="Description" Type="nvarchar" MaxLength="128" />
+    <Property Name="ParentType" Type="nvarchar" MaxLength="32" />
+    <Property Name="RowStatus" Type="char" MaxLength="1" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OTPMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="128" />
+    <Property Name="OTP" Type="nvarchar" MaxLength="16" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserDetails">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="char" MaxLength="1" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="Profession" Type="nvarchar" MaxLength="50" />
+    <Property Name="Domain" Type="nvarchar" MaxLength="50" />
+    <Property Name="Industry" Type="nvarchar" MaxLength="50" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="Spc_CheckUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pwd" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spg_ValidateOTP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mobile" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="iGratifyModelStoreContainer">
+    <EntitySet Name="OTPMaster" EntityType="Self.OTPMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserDetails" EntityType="Self.UserDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MasterData" EntityType="Self.MasterData" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MasterData].[Id] AS [Id], 
+    [MasterData].[Id_Type] AS [Id_Type], 
+    [MasterData].[Code] AS [Code], 
+    [MasterData].[Description] AS [Description], 
+    [MasterData].[ParentType] AS [ParentType], 
+    [MasterData].[RowStatus] AS [RowStatus], 
+    [MasterData].[CreatedBy] AS [CreatedBy], 
+    [MasterData].[CreatedOn] AS [CreatedOn], 
+    [MasterData].[UpdatedBy] AS [UpdatedBy], 
+    [MasterData].[UpdatedOn] AS [UpdatedOn]
+    FROM [dbo].[MasterData] AS [MasterData]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

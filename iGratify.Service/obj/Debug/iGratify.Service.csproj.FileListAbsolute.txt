@@ -1,0 +1,11 @@
+D:\IGraify\iGratify\iGratify.Service\bin\Debug\iGratify.Service.dll
+D:\IGraify\iGratify\iGratify.Service\bin\Debug\iGratify.Service.pdb
+D:\IGraify\iGratify\iGratify.Service\obj\Debug\iGratify.Service.dll
+D:\IGraify\iGratify\iGratify.Service\obj\Debug\iGratify.Service.pdb
+D:\IGraify\iGratify\iGratify.Service\bin\Debug\iGratify.Modals.dll
+D:\IGraify\iGratify\iGratify.Service\bin\Debug\iGratify.Repositories.dll
+D:\IGraify\iGratify\iGratify.Service\bin\Debug\EntityFramework.dll
+D:\IGraify\iGratify\iGratify.Service\bin\Debug\iGratify.Modals.pdb
+D:\IGraify\iGratify\iGratify.Service\bin\Debug\iGratify.Repositories.pdb
+D:\IGraify\iGratify\iGratify.Service\bin\Debug\EntityFramework.xml
+D:\IGraify\iGratify\iGratify.Service\obj\Debug\iGratify.Service.csprojResolveAssemblyReference.cache
